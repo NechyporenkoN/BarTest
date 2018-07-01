@@ -13,7 +13,7 @@ class CoffeeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     
-    var arrayNamesOfCoffee = ["Espresso", "Americano", "Americano with milk", "Capuccino", "Latte", "Dopio", "Loongo", "Maciato"]
+    var arrayNamesOfCoffee = ["Espresso", "Americano", "Americano with milk", "Capuccino", "Latte", "Dopio", "Loongo", "Maciato", "Mochaccino"]
     
     var chooseCoffeeImage = ""
     var  aboutCoffee = ""
@@ -23,8 +23,15 @@ class CoffeeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         tableView.dataSource = self
         tableView.delegate = self
-        
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCoffee" {
+            let vc = segue.destination as? SecondCoffeeVC
+            vc?.imageCoffee = chooseCoffeeImage
+            let vcText = segue.destination as? SecondCoffeeVC
+            vcText?.textAboutCoffee = aboutCoffee
+        }
     }
     
     //MARK: - UITableViewDataSource
@@ -44,37 +51,41 @@ class CoffeeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         performSegue(withIdentifier: "showCoffee", sender: nil)
         switch indexPath.row {
         case 0:
-            chooseCoffeeImage = ""
-            aboutCoffee = ""
+            chooseCoffeeImage = "espresso"
+            aboutCoffee = "Espresso"
             print("Espresso")
         case 1:
-            chooseCoffeeImage = ""
-            aboutCoffee = ""
+            chooseCoffeeImage = "americano"
+            aboutCoffee = "Americano"
             print("Americano")
         case 2:
-            chooseCoffeeImage = ""
-            aboutCoffee = ""
+            chooseCoffeeImage = "americano"
+            aboutCoffee = "Americano with milk"
             print("Americano with milk")
         case 3:
-            chooseCoffeeImage = ""
-            aboutCoffee = ""
+            chooseCoffeeImage = "capuccino"
+            aboutCoffee = "Capuccino"
             print("Capuccino")
         case 4:
-            chooseCoffeeImage = ""
-            aboutCoffee = ""
+            chooseCoffeeImage = "latte"
+            aboutCoffee = "Latte"
             print("Latte")
         case 5:
-            chooseCoffeeImage = ""
-            aboutCoffee = ""
+            chooseCoffeeImage = "espresso"
+            aboutCoffee = "Dopio"
             print("Dopio")
         case 6:
-            chooseCoffeeImage = ""
-            aboutCoffee = ""
+            chooseCoffeeImage = "espresso"
+            aboutCoffee = "Loongo"
             print("Loongo")
         case 7:
-            chooseCoffeeImage = ""
-            aboutCoffee = ""
+            chooseCoffeeImage = "maciato"
+            aboutCoffee = "Maciato"
             print("Maciato")
+        case 8:
+            chooseCoffeeImage = "mochaccino"
+            aboutCoffee = "Mochaccino"
+            print("Mochaccino")
         default:
             print("error")
         }
