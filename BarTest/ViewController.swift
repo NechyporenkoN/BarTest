@@ -65,6 +65,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         choosedCocktail = arrayCocktails[indexPath.row]
+        performSegue(withIdentifier: "showInformation", sender: nil)
         //            switch indexPath.row {
         //            case 0:
         //                choose = "daiquiri"
@@ -121,7 +122,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //            default:
         //                print("error")
         //            }
-        performSegue(withIdentifier: "showInformation", sender: nil)
+        
     }
     
     let daiquiriHistory = "Дайкири – это целое семейство коктейлей, которое берет начало на Кубе. Именно там, на родине рома, появилось множество коктейлей на его основе. В оригинальный, классический рецепт входят лишь белый ром и сок лайма, слегка подслащённые сахарным сиропом. Именно в таком виде коктейль был придуман американским инженером, который проживал на Кубе во время войны с испанцами. Он дал название своему напитку в честь пляжей Дайкири, которые находятся близ кубинского Сантьяго. Известный факт: Дайкири был любимым напитком знаменитого писателя Эрнесто Хемингуэя, а также убитого президента США Джона Кеннеди. Президент неоднократно упоминал об этом в своих интервью, а Хемингуэй говорил об этом от лица героев своих книг. Существует множество различных вариаций коктейля. В некоторых из них сахарный сироп заменен на какой-либо фруктовый сок или фруктовое пюре, в других вместо лайма используется лимон, что делает вкус более мягким."

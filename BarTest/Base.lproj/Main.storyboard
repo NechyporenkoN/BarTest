@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r5T-xD-y1R">
-                                <rect key="frame" x="8" y="20" width="304" height="479"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCocktail" textLabel="NWQ-b6-yaX" detailTextLabel="Bo8-Cs-RCr" style="IBUITableViewCellStyleValue1" id="NPc-8f-APV">
@@ -55,10 +55,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.095344610512256622" green="0.81303423643112183" blue="0.072435252368450165" alpha="0.47321810790000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r5T-xD-y1R" secondAttribute="bottom" constant="20" id="3xE-SK-JPv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r5T-xD-y1R" secondAttribute="trailing" constant="8" id="MrL-9c-x9g"/>
-                            <constraint firstItem="r5T-xD-y1R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="TvN-Ub-Hw2"/>
-                            <constraint firstItem="r5T-xD-y1R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="hgH-mJ-jfF"/>
+                            <constraint firstItem="r5T-xD-y1R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Vv-Id-uLy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r5T-xD-y1R" secondAttribute="bottom" id="8c6-TM-4Zj"/>
+                            <constraint firstItem="r5T-xD-y1R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ypm-vu-gGu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r5T-xD-y1R" secondAttribute="trailing" id="zmS-1d-eEx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -198,11 +198,13 @@
             </objects>
             <point key="canvasLocation" x="954.375" y="127.8169014084507"/>
         </scene>
-        <!--Item-->
+        <!--Cocktails-->
         <scene sceneID="vQg-u7-BpV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aQL-4h-JmA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="hzX-Io-hY3"/>
+                    <tabBarItem key="tabBarItem" title="Cocktails" image="cocktail" id="hzX-Io-hY3">
+                        <color key="badgeColor" red="0.095344610512256622" green="0.81303423643112183" blue="0.072435252368450165" alpha="0.47321810790000002" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yRE-wj-qPR">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -217,11 +219,11 @@
             </objects>
             <point key="canvasLocation" x="-573.75" y="127.8169014084507"/>
         </scene>
-        <!--Item-->
+        <!--Coffee-->
         <scene sceneID="YOv-5S-bES">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mgZ-bj-jix" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xpo-5n-ddt"/>
+                    <tabBarItem key="tabBarItem" title="Coffee" image="cafe" id="xpo-5n-ddt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JiN-C0-Btp">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -255,4 +257,8 @@
             <point key="canvasLocation" x="-1451" y="475"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cafe" width="25" height="25"/>
+        <image name="cocktail" width="25" height="25"/>
+    </resources>
 </document>

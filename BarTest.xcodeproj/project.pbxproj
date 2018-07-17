@@ -16,6 +16,7 @@
 		1786351420E97EEC006BFC83 /* CoffeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786351320E97EEC006BFC83 /* CoffeeVC.swift */; };
 		1786351620E97F0E006BFC83 /* SecondCoffeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786351520E97F0E006BFC83 /* SecondCoffeeVC.swift */; };
 		1786351820FE0A67006BFC83 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786351720FE0A67006BFC83 /* Cocktail.swift */; };
+		1786351A20FE1E0A006BFC83 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786351920FE1E0A006BFC83 /* Coffee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1786351320E97EEC006BFC83 /* CoffeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeVC.swift; sourceTree = "<group>"; };
 		1786351520E97F0E006BFC83 /* SecondCoffeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCoffeeVC.swift; sourceTree = "<group>"; };
 		1786351720FE0A67006BFC83 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		1786351920FE1E0A006BFC83 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				1786351320E97EEC006BFC83 /* CoffeeVC.swift */,
 				1786351520E97F0E006BFC83 /* SecondCoffeeVC.swift */,
 				1786351720FE0A67006BFC83 /* Cocktail.swift */,
+				1786351920FE1E0A006BFC83 /* Coffee.swift */,
 				172654EE20F79DD600A479A7 /* ViewController.swift */,
 				1786351120E93A28006BFC83 /* SecondVC.swift */,
 				172654F020F79DD600A479A7 /* Main.storyboard */,
@@ -154,6 +157,7 @@
 				1786351220E93A28006BFC83 /* SecondVC.swift in Sources */,
 				172654ED20F79DD600A479A7 /* AppDelegate.swift in Sources */,
 				1786351820FE0A67006BFC83 /* Cocktail.swift in Sources */,
+				1786351A20FE1E0A006BFC83 /* Coffee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

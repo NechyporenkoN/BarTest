@@ -9,20 +9,30 @@
 import UIKit
 
 class SecondCoffeeVC: UIViewController {
-
+    
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myTextView: UITextView!
     
-    var imageCoffee = ""
-    var textAboutCoffee = ""
+    //    var imageCoffee = ""
+    //    var textAboutCoffee = ""
+    
+    var coffeePul: Coffee?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myImage.image = UIImage(named: imageCoffee)
-        myTextView.text = textAboutCoffee
-
+        setupScreen()
         
     }
-
+    
+    func setupScreen() {
+        guard let currentCoffee = coffeePul else {
+            return
+        }
+        myImage.image = UIImage(named: currentCoffee.image)
+        myTextView.text = currentCoffee.discription
+        
+        
+    }
 }
+
