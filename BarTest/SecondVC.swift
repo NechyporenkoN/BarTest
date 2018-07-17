@@ -13,9 +13,10 @@ class SecondVC: UIViewController {
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myTextViev: UITextView!
     
-    
-    var imageCocktail = ""
-    var textAboutCocktail = ""
+  
+//    var imageCocktail = ""
+//    var textAboutCocktail = ""
+    var cocktailPul: Coctail?
     
     var myImageView = UIImageView()
     
@@ -23,10 +24,17 @@ class SecondVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        myImage.image = UIImage(named: imageCocktail)
-        myTextViev.text = textAboutCocktail
+        setupScreen()
+        
     }
     
+    func setupScreen() {
+        guard let currentCocktail = cocktailPul else {
+            return
+        }
+        myImage.image = UIImage(named: currentCocktail.image)
+        myTextViev.text = currentCocktail.discription
+    }
    
 
 

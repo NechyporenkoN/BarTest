@@ -21,16 +21,14 @@ class CoffeeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self
-        tableView.delegate = self
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCoffee" {
             let vc = segue.destination as? SecondCoffeeVC
             vc?.imageCoffee = chooseCoffeeImage
-            let vcText = segue.destination as? SecondCoffeeVC
-            vcText?.textAboutCoffee = aboutCoffee
+            vc?.textAboutCoffee = aboutCoffee
         }
     }
     
@@ -48,7 +46,7 @@ class CoffeeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showCoffee", sender: nil)
+        
         switch indexPath.row {
         case 0:
             chooseCoffeeImage = "espresso"
@@ -89,5 +87,6 @@ class CoffeeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         default:
             print("error")
         }
+        performSegue(withIdentifier: "showCoffee", sender: nil)
     }
 }
