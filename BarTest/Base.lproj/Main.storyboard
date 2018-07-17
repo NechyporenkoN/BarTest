@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cocktails-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BarTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,10 +23,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCocktail" textLabel="NWQ-b6-yaX" detailTextLabel="Bo8-Cs-RCr" style="IBUITableViewCellStyleValue1" id="NPc-8f-APV">
-                                        <rect key="frame" x="0.0" y="28" width="304" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NPc-8f-APV" id="F7B-QJ-hcv">
-                                            <rect key="frame" x="0.0" y="0.0" width="304" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NWQ-b6-yaX">
@@ -37,7 +37,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bo8-Cs-RCr">
-                                                    <rect key="frame" x="245" y="12" width="44" height="20.5"/>
+                                                    <rect key="frame" x="261" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -62,7 +62,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="K9V-ci-Pq3"/>
+                    <navigationItem key="navigationItem" title="Cocktails" id="K9V-ci-Pq3"/>
                     <connections>
                         <outlet property="tableView" destination="r5T-xD-y1R" id="ny6-MN-SV4"/>
                         <segue destination="Wyi-VI-nef" kind="show" identifier="showInformation" id="865-Qy-66f"/>
@@ -72,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="223.125" y="127.8169014084507"/>
         </scene>
-        <!--CoffeeVC-->
+        <!--Coffee-->
         <scene sceneID="BiW-vM-qHD">
             <objects>
                 <viewController id="6K0-d4-SR1" customClass="CoffeeVC" customModule="BarTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -124,7 +124,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WUj-VD-XkY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vfv-lB-edg"/>
+                    <navigationItem key="navigationItem" title="Coffee" id="vfv-lB-edg"/>
                     <connections>
                         <outlet property="tableView" destination="2od-GH-hL3" id="WZR-pn-561"/>
                         <segue destination="H9D-22-pHA" kind="show" identifier="showCoffee" id="YOP-qE-WOl"/>
@@ -140,21 +140,31 @@
                 <viewController id="H9D-22-pHA" customClass="SecondCoffeeVC" customModule="BarTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4TM-98-8RO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RbB-iW-loU">
-                                <rect key="frame" x="8" y="64" width="304" height="203"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbB-iW-loU">
+                                <rect key="frame" x="2" y="68" width="316" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="HXu-nd-PWz"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VS4-z9-0E4">
-                                <rect key="frame" x="8" y="275" width="304" height="273"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VS4-z9-0E4">
+                                <rect key="frame" x="2" y="275" width="316" height="253"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.52501016855239868" green="0.31808182597160339" blue="0.088536523282527924" alpha="0.6056292808" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VS4-z9-0E4" firstAttribute="top" secondItem="RbB-iW-loU" secondAttribute="bottom" constant="4" id="0kc-1v-3Uu"/>
+                            <constraint firstAttribute="bottom" secondItem="VS4-z9-0E4" secondAttribute="bottom" constant="40" id="Cia-aP-ZJU"/>
+                            <constraint firstItem="KNd-c6-Cv5" firstAttribute="trailing" secondItem="RbB-iW-loU" secondAttribute="trailing" constant="2" id="Gvg-Ql-8Rc"/>
+                            <constraint firstItem="VS4-z9-0E4" firstAttribute="leading" secondItem="KNd-c6-Cv5" secondAttribute="leading" constant="2" id="Ioo-xT-qhq"/>
+                            <constraint firstItem="RbB-iW-loU" firstAttribute="top" secondItem="KNd-c6-Cv5" secondAttribute="top" constant="4" id="LHM-3A-mPb"/>
+                            <constraint firstItem="KNd-c6-Cv5" firstAttribute="trailing" secondItem="VS4-z9-0E4" secondAttribute="trailing" constant="2" id="ghi-TX-Xc8"/>
+                            <constraint firstItem="RbB-iW-loU" firstAttribute="leading" secondItem="KNd-c6-Cv5" secondAttribute="leading" constant="2" id="qet-rZ-u68"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KNd-c6-Cv5"/>
                     </view>
                     <connections>
@@ -174,19 +184,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KB-sl-0Ht">
-                                <rect key="frame" x="8" y="64" width="304" height="203"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KB-sl-0Ht">
+                                <rect key="frame" x="2" y="68" width="316" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="eEC-dc-odX"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40t-1x-ozz">
-                                <rect key="frame" x="8" y="275" width="304" height="273"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40t-1x-ozz">
+                                <rect key="frame" x="0.0" y="275" width="320" height="253"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.095344610512256622" green="0.81303423643112183" blue="0.072435252368450165" alpha="0.47321810790000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oG5-18-nc6" firstAttribute="trailing" secondItem="8KB-sl-0Ht" secondAttribute="trailing" constant="2" id="3rW-F6-LhJ"/>
+                            <constraint firstItem="oG5-18-nc6" firstAttribute="trailing" secondItem="40t-1x-ozz" secondAttribute="trailing" id="47V-87-Rln"/>
+                            <constraint firstItem="40t-1x-ozz" firstAttribute="leading" secondItem="oG5-18-nc6" secondAttribute="leading" id="Gkf-zb-zZT"/>
+                            <constraint firstItem="40t-1x-ozz" firstAttribute="top" secondItem="8KB-sl-0Ht" secondAttribute="bottom" constant="4" id="Tyr-1Y-oBf"/>
+                            <constraint firstItem="8KB-sl-0Ht" firstAttribute="top" secondItem="oG5-18-nc6" secondAttribute="top" constant="4" id="hz5-sv-Zhx"/>
+                            <constraint firstItem="8KB-sl-0Ht" firstAttribute="leading" secondItem="oG5-18-nc6" secondAttribute="leading" constant="2" id="rCW-pt-rwC"/>
+                            <constraint firstAttribute="bottom" secondItem="40t-1x-ozz" secondAttribute="bottom" constant="40" id="so3-ty-jaV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oG5-18-nc6"/>
                     </view>
                     <connections>
@@ -223,7 +243,9 @@
         <scene sceneID="YOv-5S-bES">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mgZ-bj-jix" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Coffee" image="cafe" id="xpo-5n-ddt"/>
+                    <tabBarItem key="tabBarItem" title="Coffee" image="cafe" id="xpo-5n-ddt">
+                        <color key="badgeColor" red="0.52501016855239868" green="0.31808182597160339" blue="0.088536523282527924" alpha="0.6056292808" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JiN-C0-Btp">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -246,6 +268,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r8e-8j-qEv">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.095344610512256622" green="0.81303423643112183" blue="0.072435252368450165" alpha="0.47321810790000002" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="aQL-4h-JmA" kind="relationship" relationship="viewControllers" id="lSf-fm-Azh"/>
