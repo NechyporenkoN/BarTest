@@ -13,9 +13,9 @@ class ThirdVC: UIViewController {
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myTextView: UITextView!
     
-    var myImageView = UIImageView()
+   // var myImageView = UIImageView()
     
-    var cocktailPul: Coctail?
+    var cocktailPulRecipe: Coctail?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +23,9 @@ class ThirdVC: UIViewController {
         setupScreen()
         
     }
+    
     func setupScreen() {
-        guard let currentCocktail = cocktailPul else {
+        guard let currentCocktail = cocktailPulRecipe else {
             return
         }
         myImage.image = UIImage(named: currentCocktail.image)

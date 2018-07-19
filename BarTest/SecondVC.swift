@@ -19,7 +19,7 @@ class SecondVC: UIViewController {
     
     var cocktailPul: Coctail?
     
-    var myImageView = UIImageView()
+   // var myImageView = UIImageView()
     
     
     override func viewDidLoad() {
@@ -29,6 +29,16 @@ class SecondVC: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "howMake" {
+            let vc = segue.destination as? ThirdVC
+            vc?.cocktailPulRecipe = cocktailPul
+        }
+        if segue.identifier == "history" {
+            let vc = segue.destination as? HistoryVC
+            vc?.cocktailPulHistory = cocktailPul
+    }
+    }
     func setupScreen() {
         guard let currentCocktail = cocktailPul else {
             return

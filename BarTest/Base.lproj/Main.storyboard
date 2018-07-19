@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="DevanagariSangamMN.ttc">
+            <string>DevanagariSangamMN</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Cocktails-->
         <scene sceneID="tne-QT-ifu">
@@ -53,7 +58,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.095344610512256622" green="0.81303423643112183" blue="0.072435252368450165" alpha="0.47321810790000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="r5T-xD-y1R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Vv-Id-uLy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r5T-xD-y1R" secondAttribute="bottom" id="8c6-TM-4Zj"/>
@@ -115,7 +120,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.52501016855239868" green="0.31808182597160339" blue="0.088536523282527924" alpha="0.6056292808" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2od-GH-hL3" firstAttribute="leading" secondItem="WUj-VD-XkY" secondAttribute="leading" id="FBn-Lk-Xlf"/>
                             <constraint firstItem="WUj-VD-XkY" firstAttribute="trailing" secondItem="2od-GH-hL3" secondAttribute="trailing" id="MbK-B6-xeE"/>
@@ -155,7 +160,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.52501016855239868" green="0.31808182597160339" blue="0.088536523282527924" alpha="0.6056292808" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VS4-z9-0E4" firstAttribute="top" secondItem="RbB-iW-loU" secondAttribute="bottom" constant="4" id="0kc-1v-3Uu"/>
                             <constraint firstAttribute="bottom" secondItem="VS4-z9-0E4" secondAttribute="bottom" constant="40" id="Cia-aP-ZJU"/>
@@ -190,37 +195,38 @@
                                     <constraint firstAttribute="height" constant="203" id="eEC-dc-odX"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40t-1x-ozz">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40t-1x-ozz">
                                 <rect key="frame" x="0.0" y="326" width="320" height="202"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqA-LU-7g4">
                                 <rect key="frame" x="4" y="275" width="155" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Как приготовить">
-                                    <color key="titleColor" red="0.79616802930831909" green="0.075903080403804779" blue="0.19536280632019043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.79616802930831909" green="0.075903080403804779" blue="0.19536280632019043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="15"/>
+                                <state key="normal" title="Как приготовить" backgroundImage="Label">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mZ8-89-YXg" kind="show" id="oea-kQ-7gi"/>
+                                    <segue destination="mZ8-89-YXg" kind="show" identifier="howMake" id="oea-kQ-7gi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAN-Z2-l0y">
                                 <rect key="frame" x="161" y="275" width="155" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="История коктейля">
-                                    <color key="titleColor" red="0.79616802930831909" green="0.075903080403804779" blue="0.19536280632019043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.79616802930831909" green="0.075903080403804779" blue="0.19536280632019043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="15"/>
+                                <state key="normal" title="История коктейля" backgroundImage="Label">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Pht-ld-cHc" kind="show" id="c1y-Ha-hRv"/>
+                                    <segue destination="Pht-ld-cHc" kind="show" identifier="history" id="c1y-Ha-hRv"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.095344610512256622" green="0.81303423643112183" blue="0.072435252368450165" alpha="0.47321810790000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oG5-18-nc6" firstAttribute="trailing" secondItem="8KB-sl-0Ht" secondAttribute="trailing" constant="2" id="3rW-F6-LhJ"/>
                             <constraint firstItem="oG5-18-nc6" firstAttribute="trailing" secondItem="40t-1x-ozz" secondAttribute="trailing" id="47V-87-Rln"/>
@@ -235,8 +241,6 @@
                     <connections>
                         <outlet property="myImage" destination="8KB-sl-0Ht" id="WDt-ir-COJ"/>
                         <outlet property="myTextViev" destination="40t-1x-ozz" id="dgx-Jr-UIj"/>
-                        <segue destination="mZ8-89-YXg" kind="show" identifier="showRecipe" id="WDc-X4-V8C"/>
-                        <segue destination="Pht-ld-cHc" kind="show" identifier="showHistory" id="snQ-0Z-NhB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4VZ-m0-qzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -251,19 +255,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="juQ-8G-35Q">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="juQ-8G-35Q">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-w3-ztm">
-                                <rect key="frame" x="2" y="66" width="318" height="453"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.75" contentMode="scaleToFill" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-w3-ztm">
+                                <rect key="frame" x="8" y="66" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pca-w3-ztm" firstAttribute="leading" secondItem="sDd-zs-xhu" secondAttribute="leading" constant="8" id="1u4-xJ-x6Z"/>
+                            <constraint firstItem="Pca-w3-ztm" firstAttribute="trailing" secondItem="sDd-zs-xhu" secondAttribute="trailing" constant="8" id="HsG-Aw-yxV"/>
+                            <constraint firstItem="Pca-w3-ztm" firstAttribute="top" secondItem="sDd-zs-xhu" secondAttribute="top" constant="2" id="IUM-Yk-YTI"/>
+                            <constraint firstItem="Pca-w3-ztm" firstAttribute="bottom" secondItem="sDd-zs-xhu" secondAttribute="bottom" constant="2" id="fbB-u4-4XG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sDd-zs-xhu"/>
                     </view>
                     <connections>
@@ -283,15 +292,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KH5-eB-Tpn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KH5-eB-Tpn">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SH3-sz-Ut1">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="SH3-sz-Ut1">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                             </textView>
                         </subviews>
@@ -357,7 +366,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r8e-8j-qEv">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="selectedImageTintColor" red="0.095344610512256622" green="0.81303423643112183" blue="0.072435252368450165" alpha="0.47321810790000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="aQL-4h-JmA" kind="relationship" relationship="viewControllers" id="lSf-fm-Azh"/>
@@ -370,11 +379,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Label" width="169" height="54"/>
         <image name="cafe" width="25" height="25"/>
         <image name="cocktail" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="snQ-0Z-NhB"/>
-        <segue reference="WDc-X4-V8C"/>
-    </inferredMetricsTieBreakers>
 </document>

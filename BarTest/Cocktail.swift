@@ -15,12 +15,16 @@ class Coctail {
     var image: String
     var ingridients: String
     var recipe: String
+    var taste: String
+    var level: String
     
-    init(name: String, discription: String, image: String, ingridients: String, recipe: String) {
+    init(name: String, discription: String, image: String, ingridients: String, recipe: String, taste: String, level: String) {
         self.name = name
         self.discription = discription
         self.image = image
         self.ingridients = ingridients
         self.recipe = recipe
+        self.taste = taste
+        self.level = level
     }
 }
