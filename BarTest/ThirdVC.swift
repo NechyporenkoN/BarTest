@@ -1,26 +1,21 @@
 //
-//  SecondVC.swift
+//  ThirdVC.swift
 //  BarTest
 //
-//  Created by Nikita Nechyporenko on 01.07.18.
+//  Created by Nikita Nechyporenko on 18.07.18.
 //  Copyright © 2018 Nikita Nechyporenko. All rights reserved.
 //
 
 import UIKit
 
-class SecondVC: UIViewController {
+class ThirdVC: UIViewController {
     
     @IBOutlet weak var myImage: UIImageView!
-    @IBOutlet weak var myTextViev: UITextView!
-    
-    
-    //    var imageCocktail = ""
-    //    var textAboutCocktail = ""
-    
-    var cocktailPul: Coctail?
+    @IBOutlet weak var myTextView: UITextView!
     
     var myImageView = UIImageView()
     
+    var cocktailPul: Coctail?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +23,11 @@ class SecondVC: UIViewController {
         setupScreen()
         
     }
-    
     func setupScreen() {
         guard let currentCocktail = cocktailPul else {
             return
         }
         myImage.image = UIImage(named: currentCocktail.image)
-        myTextViev.text = currentCocktail.ingridients
+        myTextView.text = currentCocktail.recipe
     }
 }

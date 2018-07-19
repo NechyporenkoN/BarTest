@@ -191,18 +191,41 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40t-1x-ozz">
-                                <rect key="frame" x="0.0" y="275" width="320" height="253"/>
+                                <rect key="frame" x="0.0" y="326" width="320" height="202"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqA-LU-7g4">
+                                <rect key="frame" x="4" y="275" width="155" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Как приготовить">
+                                    <color key="titleColor" red="0.79616802930831909" green="0.075903080403804779" blue="0.19536280632019043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.79616802930831909" green="0.075903080403804779" blue="0.19536280632019043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mZ8-89-YXg" kind="show" id="oea-kQ-7gi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAN-Z2-l0y">
+                                <rect key="frame" x="161" y="275" width="155" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="История коктейля">
+                                    <color key="titleColor" red="0.79616802930831909" green="0.075903080403804779" blue="0.19536280632019043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.79616802930831909" green="0.075903080403804779" blue="0.19536280632019043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Pht-ld-cHc" kind="show" id="c1y-Ha-hRv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.095344610512256622" green="0.81303423643112183" blue="0.072435252368450165" alpha="0.47321810790000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oG5-18-nc6" firstAttribute="trailing" secondItem="8KB-sl-0Ht" secondAttribute="trailing" constant="2" id="3rW-F6-LhJ"/>
                             <constraint firstItem="oG5-18-nc6" firstAttribute="trailing" secondItem="40t-1x-ozz" secondAttribute="trailing" id="47V-87-Rln"/>
                             <constraint firstItem="40t-1x-ozz" firstAttribute="leading" secondItem="oG5-18-nc6" secondAttribute="leading" id="Gkf-zb-zZT"/>
-                            <constraint firstItem="40t-1x-ozz" firstAttribute="top" secondItem="8KB-sl-0Ht" secondAttribute="bottom" constant="4" id="Tyr-1Y-oBf"/>
+                            <constraint firstItem="40t-1x-ozz" firstAttribute="top" secondItem="8KB-sl-0Ht" secondAttribute="bottom" constant="55" id="Tyr-1Y-oBf"/>
                             <constraint firstItem="8KB-sl-0Ht" firstAttribute="top" secondItem="oG5-18-nc6" secondAttribute="top" constant="4" id="hz5-sv-Zhx"/>
                             <constraint firstItem="8KB-sl-0Ht" firstAttribute="leading" secondItem="oG5-18-nc6" secondAttribute="leading" constant="2" id="rCW-pt-rwC"/>
                             <constraint firstAttribute="bottom" secondItem="40t-1x-ozz" secondAttribute="bottom" constant="40" id="so3-ty-jaV"/>
@@ -212,11 +235,77 @@
                     <connections>
                         <outlet property="myImage" destination="8KB-sl-0Ht" id="WDt-ir-COJ"/>
                         <outlet property="myTextViev" destination="40t-1x-ozz" id="dgx-Jr-UIj"/>
+                        <segue destination="mZ8-89-YXg" kind="show" identifier="showRecipe" id="WDc-X4-V8C"/>
+                        <segue destination="Pht-ld-cHc" kind="show" identifier="showHistory" id="snQ-0Z-NhB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4VZ-m0-qzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="954.375" y="127.8169014084507"/>
+        </scene>
+        <!--ThirdVC-->
+        <scene sceneID="83e-uQ-bf8">
+            <objects>
+                <viewController id="mZ8-89-YXg" customClass="ThirdVC" customModule="BarTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qLz-kA-G8n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="juQ-8G-35Q">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-w3-ztm">
+                                <rect key="frame" x="2" y="66" width="318" height="453"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="sDd-zs-xhu"/>
+                    </view>
+                    <connections>
+                        <outlet property="myImage" destination="juQ-8G-35Q" id="Egf-57-kef"/>
+                        <outlet property="myTextView" destination="Pca-w3-ztm" id="HHI-2P-LhD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAg-VL-AFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745.625" y="-218.66197183098592"/>
+        </scene>
+        <!--HistoryVC-->
+        <scene sceneID="vOB-vv-rna">
+            <objects>
+                <viewController id="Pht-ld-cHc" customClass="HistoryVC" customModule="BarTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hlu-mX-n99">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KH5-eB-Tpn">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SH3-sz-Ut1">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="22b-hM-Xij"/>
+                    </view>
+                    <connections>
+                        <outlet property="myImage" destination="KH5-eB-Tpn" id="F3R-xl-vfN"/>
+                        <outlet property="myTextView" destination="SH3-sz-Ut1" id="Evb-rg-r3s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5x9-n5-Sxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745.625" y="473.23943661971833"/>
         </scene>
         <!--Cocktails-->
         <scene sceneID="vQg-u7-BpV">
@@ -284,4 +373,8 @@
         <image name="cafe" width="25" height="25"/>
         <image name="cocktail" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="snQ-0Z-NhB"/>
+        <segue reference="WDc-X4-V8C"/>
+    </inferredMetricsTieBreakers>
 </document>

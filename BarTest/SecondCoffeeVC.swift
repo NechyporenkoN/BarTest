@@ -22,7 +22,6 @@ class SecondCoffeeVC: UIViewController {
         super.viewDidLoad()
         
         setupScreen()
-        
     }
     
     func setupScreen() {
@@ -31,8 +30,6 @@ class SecondCoffeeVC: UIViewController {
         }
         myImage.image = UIImage(named: currentCoffee.image)
         myTextView.text = currentCoffee.discription
-        
-        
     }
 }
 

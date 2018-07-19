@@ -17,6 +17,8 @@
 		1786351620E97F0E006BFC83 /* SecondCoffeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786351520E97F0E006BFC83 /* SecondCoffeeVC.swift */; };
 		1786351820FE0A67006BFC83 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786351720FE0A67006BFC83 /* Cocktail.swift */; };
 		1786351A20FE1E0A006BFC83 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786351920FE1E0A006BFC83 /* Coffee.swift */; };
+		1786351C20FF896F006BFC83 /* ThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786351B20FF896F006BFC83 /* ThirdVC.swift */; };
+		1786351E20FFA832006BFC83 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786351D20FFA832006BFC83 /* HistoryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		1786351520E97F0E006BFC83 /* SecondCoffeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCoffeeVC.swift; sourceTree = "<group>"; };
 		1786351720FE0A67006BFC83 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 		1786351920FE1E0A006BFC83 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		1786351B20FF896F006BFC83 /* ThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdVC.swift; sourceTree = "<group>"; };
+		1786351D20FFA832006BFC83 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +68,15 @@
 		172654EB20F79DD600A479A7 /* BarTest */ = {
 			isa = PBXGroup;
 			children = (
-				172654EC20F79DD600A479A7 /* AppDelegate.swift */,
-				1786351320E97EEC006BFC83 /* CoffeeVC.swift */,
-				1786351520E97F0E006BFC83 /* SecondCoffeeVC.swift */,
 				1786351720FE0A67006BFC83 /* Cocktail.swift */,
-				1786351920FE1E0A006BFC83 /* Coffee.swift */,
 				172654EE20F79DD600A479A7 /* ViewController.swift */,
 				1786351120E93A28006BFC83 /* SecondVC.swift */,
+				1786351B20FF896F006BFC83 /* ThirdVC.swift */,
+				1786351D20FFA832006BFC83 /* HistoryVC.swift */,
+				1786351920FE1E0A006BFC83 /* Coffee.swift */,
+				1786351320E97EEC006BFC83 /* CoffeeVC.swift */,
+				1786351520E97F0E006BFC83 /* SecondCoffeeVC.swift */,
+				172654EC20F79DD600A479A7 /* AppDelegate.swift */,
 				172654F020F79DD600A479A7 /* Main.storyboard */,
 				172654F320F79DD600A479A7 /* Assets.xcassets */,
 				172654F520F79DD600A479A7 /* LaunchScreen.storyboard */,
@@ -155,8 +161,10 @@
 				1786351420E97EEC006BFC83 /* CoffeeVC.swift in Sources */,
 				172654EF20F79DD600A479A7 /* ViewController.swift in Sources */,
 				1786351220E93A28006BFC83 /* SecondVC.swift in Sources */,
+				1786351C20FF896F006BFC83 /* ThirdVC.swift in Sources */,
 				172654ED20F79DD600A479A7 /* AppDelegate.swift in Sources */,
 				1786351820FE0A67006BFC83 /* Cocktail.swift in Sources */,
+				1786351E20FFA832006BFC83 /* HistoryVC.swift in Sources */,
 				1786351A20FE1E0A006BFC83 /* Coffee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
