@@ -12,6 +12,8 @@ class SecondVC: UIViewController {
     
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myTextViev: UITextView!
+    @IBOutlet weak var tasteText: UITextField!
+    @IBOutlet weak var levelText: UITextField!
     
     
     //    var imageCocktail = ""
@@ -45,5 +47,7 @@ class SecondVC: UIViewController {
         }
         myImage.image = UIImage(named: currentCocktail.image)
         myTextViev.text = currentCocktail.ingridients
+        tasteText.text = currentCocktail.taste
+        levelText.text = currentCocktail.level
     }
 }
