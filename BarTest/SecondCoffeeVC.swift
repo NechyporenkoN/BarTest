@@ -16,7 +16,7 @@ class SecondCoffeeVC: UIViewController {
     //    var imageCoffee = ""
     //    var textAboutCoffee = ""
     
-    var coffeePul: Coffee?
+    var coffeePull: Coffee?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class SecondCoffeeVC: UIViewController {
     }
     
     func setupScreen() {
-        guard let currentCoffee = coffeePul else {
+        guard let currentCoffee = coffeePull else {
             return
         }
         myImage.image = UIImage(named: currentCoffee.image)

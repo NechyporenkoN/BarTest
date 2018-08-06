@@ -8,43 +8,42 @@
 
 import UIKit
 
-class SecondVC: UIViewController {
+class SecondVC: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myTextViev: UITextView!
     @IBOutlet weak var tasteText: UITextField!
     @IBOutlet weak var levelText: UITextField!
     
-    
     //    var imageCocktail = ""
     //    var textAboutCocktail = ""
     
-    var cocktailPul: Coctail?
+    var cocktailPull: Coctail?
     
-   // var myImageView = UIImageView()
-    
+    // var myImageView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupScreen()
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "howMake" {
             let vc = segue.destination as? ThirdVC
-            vc?.cocktailPulRecipe = cocktailPul
+            vc?.cocktailPullRecipe = cocktailPull
         }
         if segue.identifier == "history" {
             let vc = segue.destination as? HistoryVC
-            vc?.cocktailPulHistory = cocktailPul
+            vc?.cocktailPullHistory = cocktailPull
+        }
     }
-    }
+    
     func setupScreen() {
-        guard let currentCocktail = cocktailPul else {
+        guard let currentCocktail = cocktailPull else {
             return
         }
+        
         myImage.image = UIImage(named: currentCocktail.image)
         myTextViev.text = currentCocktail.ingridients
         tasteText.text = currentCocktail.taste

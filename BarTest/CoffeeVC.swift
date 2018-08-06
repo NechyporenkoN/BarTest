@@ -24,21 +24,18 @@ class CoffeeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                        Coffee.init(name: "Mochaccino", discription: "Кофейный напиток, созданный в Америке и являющийся разновидностью латте с добавлением шоколада. Название «мокаччино» используется в Европе. В Северной Америке этот напиток известен как «мокко» («мокка»).", image: "mochaccino")]
     //["Espresso", "Americano", "Americano with milk", "Capuccino", "Latte", "Dopio", "Loongo", "Maciato", "Mochaccino"]
     
-    
     //    var chooseCoffeeImage = ""
     //    var  aboutCoffee = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCoffee" {
             let vc = segue.destination as? SecondCoffeeVC
-            vc?.coffeePul = choosedCoffee
-            
+            vc?.coffeePull = choosedCoffee
         }
     }
     

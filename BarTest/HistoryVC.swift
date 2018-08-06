@@ -13,9 +13,9 @@ class HistoryVC: UIViewController {
     @IBOutlet weak var myTextView: UITextView!
     @IBOutlet weak var myImage: UIImageView!
     
-   // var myImageView = UIImageView()
+    // var myImageView = UIImageView()
     
-    var cocktailPulHistory: Coctail?
+    var cocktailPullHistory: Coctail?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class HistoryVC: UIViewController {
     }
     
     func setupScreen() {
-        guard let currentCocktail = cocktailPulHistory else {
+        guard let currentCocktail = cocktailPullHistory else {
             return
         }
         myImage.image = UIImage(named: currentCocktail.image)

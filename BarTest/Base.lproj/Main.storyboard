@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r5T-xD-y1R">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <rect key="frame" x="0.0" y="120" width="320" height="448"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCocktail" textLabel="NWQ-b6-yaX" detailTextLabel="Bo8-Cs-RCr" style="IBUITableViewCellStyleValue1" id="NPc-8f-APV">
@@ -57,25 +57,38 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Njl-LN-STN"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search cocktail" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iXi-3m-d50">
+                                <rect key="frame" x="0.0" y="64" width="320" height="56"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="WEm-Ir-GCI"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="r5T-xD-y1R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Vv-Id-uLy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r5T-xD-y1R" secondAttribute="bottom" id="8c6-TM-4Zj"/>
-                            <constraint firstItem="r5T-xD-y1R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ypm-vu-gGu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r5T-xD-y1R" secondAttribute="trailing" id="zmS-1d-eEx"/>
+                            <constraint firstItem="r5T-xD-y1R" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8Iq-xt-Qkf"/>
+                            <constraint firstItem="iXi-3m-d50" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GtO-DO-wDZ"/>
+                            <constraint firstAttribute="bottom" secondItem="r5T-xD-y1R" secondAttribute="bottom" id="ICg-Sk-wDA"/>
+                            <constraint firstItem="r5T-xD-y1R" firstAttribute="top" secondItem="iXi-3m-d50" secondAttribute="bottom" id="Lxa-Sl-aL4"/>
+                            <constraint firstItem="iXi-3m-d50" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="UeL-kt-33q"/>
+                            <constraint firstAttribute="trailing" secondItem="iXi-3m-d50" secondAttribute="trailing" id="YjY-uE-vq5"/>
+                            <constraint firstItem="r5T-xD-y1R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wYr-fW-7l8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cocktails" id="K9V-ci-Pq3"/>
                     <connections>
+                        <outlet property="searchBar" destination="iXi-3m-d50" id="dbu-nI-rAn"/>
                         <outlet property="tableView" destination="r5T-xD-y1R" id="ny6-MN-SV4"/>
                         <segue destination="Wyi-VI-nef" kind="show" identifier="showInformation" id="865-Qy-66f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176" y="-235"/>
+            <point key="canvasLocation" x="174.375" y="-235.56338028169014"/>
         </scene>
         <!--Coffee-->
         <scene sceneID="BiW-vM-qHD">
@@ -197,7 +210,7 @@
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40t-1x-ozz">
                                 <rect key="frame" x="0.0" y="362" width="320" height="166"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
@@ -216,7 +229,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAN-Z2-l0y">
                                 <rect key="frame" x="161" y="275" width="155" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="15"/>
                                 <state key="normal" title="История коктейля" backgroundImage="Label">
                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -228,14 +241,15 @@
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Drt-Hc-BgM">
                                 <rect key="frame" x="161" y="323" width="155" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Og-Vn-97r">
                                 <rect key="frame" x="4" y="323" width="155" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -258,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4VZ-m0-qzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="-235"/>
+            <point key="canvasLocation" x="907.5" y="-235.56338028169014"/>
         </scene>
         <!--ThirdVC-->
         <scene sceneID="83e-uQ-bf8">
@@ -270,7 +284,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="juQ-8G-35Q">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.75" contentMode="scaleToFill" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-w3-ztm">
                                 <rect key="frame" x="8" y="66" width="320" height="455"/>
@@ -307,11 +321,11 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KH5-eB-Tpn">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="SH3-sz-Ut1">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
