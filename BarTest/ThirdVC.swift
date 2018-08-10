@@ -13,8 +13,6 @@ class ThirdVC: UIViewController {
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myTextView: UITextView!
     
-    // var myImageView = UIImageView()
-    
     var cocktailPullRecipe: Coctail?
     
     override func viewDidLoad() {

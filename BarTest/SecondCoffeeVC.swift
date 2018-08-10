@@ -13,9 +13,6 @@ class SecondCoffeeVC: UIViewController {
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myTextView: UITextView!
     
-    //    var imageCoffee = ""
-    //    var textAboutCoffee = ""
-    
     var coffeePull: Coffee?
     
     override func viewDidLoad() {

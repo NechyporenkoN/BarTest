@@ -12,15 +12,10 @@ class SecondVC: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myTextViev: UITextView!
-    @IBOutlet weak var tasteText: UITextField!
-    @IBOutlet weak var levelText: UITextField!
-    
-    //    var imageCocktail = ""
-    //    var textAboutCocktail = ""
+    @IBOutlet weak var tasteText: UILabel!
+    @IBOutlet weak var levelText: UILabel!
     
     var cocktailPull: Coctail?
-    
-    // var myImageView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +38,11 @@ class SecondVC: UIViewController, UIScrollViewDelegate {
         guard let currentCocktail = cocktailPull else {
             return
         }
-        
+        let tasteStr = "Вкус: "
+        let levelStr = "Сложность: "
         myImage.image = UIImage(named: currentCocktail.image)
         myTextViev.text = currentCocktail.ingridients
-        tasteText.text = currentCocktail.taste
-        levelText.text = currentCocktail.level
+        tasteText.text = tasteStr + currentCocktail.taste
+        levelText.text = levelStr + currentCocktail.level
     }
 }

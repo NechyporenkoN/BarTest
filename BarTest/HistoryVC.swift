@@ -13,8 +13,6 @@ class HistoryVC: UIViewController {
     @IBOutlet weak var myTextView: UITextView!
     @IBOutlet weak var myImage: UIImageView!
     
-    // var myImageView = UIImageView()
-    
     var cocktailPullHistory: Coctail?
     
     override func viewDidLoad() {
