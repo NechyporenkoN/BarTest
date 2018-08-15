@@ -15,7 +15,6 @@
 		177BCC682118E0C1008B390B /* Ingridients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177BCC672118E0C1008B390B /* Ingridients.swift */; };
 		177BCC6A2118E295008B390B /* IngridientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177BCC692118E295008B390B /* IngridientsVC.swift */; };
 		177BCC6C211DBF16008B390B /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177BCC6B211DBF16008B390B /* Array.swift */; };
-		177BCC6E211DD82E008B390B /* CocktailByIngridients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177BCC6D211DD82E008B390B /* CocktailByIngridients.swift */; };
 		1786351220E93A28006BFC83 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786351120E93A28006BFC83 /* SecondVC.swift */; };
 		1786351420E97EEC006BFC83 /* CoffeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786351320E97EEC006BFC83 /* CoffeeVC.swift */; };
 		1786351620E97F0E006BFC83 /* SecondCoffeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786351520E97F0E006BFC83 /* SecondCoffeeVC.swift */; };
@@ -36,7 +35,6 @@
 		177BCC672118E0C1008B390B /* Ingridients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridients.swift; sourceTree = "<group>"; };
 		177BCC692118E295008B390B /* IngridientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsVC.swift; sourceTree = "<group>"; };
 		177BCC6B211DBF16008B390B /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		177BCC6D211DD82E008B390B /* CocktailByIngridients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailByIngridients.swift; sourceTree = "<group>"; };
 		1786351120E93A28006BFC83 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 		1786351320E97EEC006BFC83 /* CoffeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeVC.swift; sourceTree = "<group>"; };
 		1786351520E97F0E006BFC83 /* SecondCoffeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCoffeeVC.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 				1786351520E97F0E006BFC83 /* SecondCoffeeVC.swift */,
 				172654EC20F79DD600A479A7 /* AppDelegate.swift */,
 				172654F020F79DD600A479A7 /* Main.storyboard */,
-				177BCC6D211DD82E008B390B /* CocktailByIngridients.swift */,
 				172654F320F79DD600A479A7 /* Assets.xcassets */,
 				172654F520F79DD600A479A7 /* LaunchScreen.storyboard */,
 				172654F820F79DD600A479A7 /* Info.plist */,
@@ -176,7 +173,6 @@
 				1786351220E93A28006BFC83 /* SecondVC.swift in Sources */,
 				1786351C20FF896F006BFC83 /* ThirdVC.swift in Sources */,
 				172654ED20F79DD600A479A7 /* AppDelegate.swift in Sources */,
-				177BCC6E211DD82E008B390B /* CocktailByIngridients.swift in Sources */,
 				1786351820FE0A67006BFC83 /* Cocktail.swift in Sources */,
 				177BCC6C211DBF16008B390B /* Array.swift in Sources */,
 				1786351E20FFA832006BFC83 /* HistoryVC.swift in Sources */,

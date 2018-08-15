@@ -33,7 +33,7 @@ class IngridientsVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         if searching {
             return  searchIngridients.count
         } else {
-            return arrayIngridients.count
+            return Arr().arrayIngridients.count
         }
     }
     
@@ -42,7 +42,7 @@ class IngridientsVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         if searching {
             cellIngridients.textLabel?.text = searchIngridients[indexPath.row]
         } else{
-            cellIngridients.textLabel?.text = arrayIngridients[indexPath.row]
+            cellIngridients.textLabel?.text = Arr().arrayIngridients[indexPath.row]
         }
         cellIngridients.detailTextLabel?.text = "->"
         return cellIngridients
@@ -54,21 +54,20 @@ class IngridientsVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         cell.layer.transform = translationTransform
         
         UIView.animate(withDuration: 0.2, delay: 0.2 , options: .curveEaseInOut, animations: {
-            cell.layer.transform = CATransform3DIdentity
-        })
+            cell.layer.transform = CATransform3DIdentity })
     }
     
     //MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        choosedIngridients = arrayIngridients[indexPath.row]
+        choosedIngridients = Arr().arrayIngridients[indexPath.row]
         performSegue(withIdentifier: "cockByIng", sender: nil)
     }
-    
 }
+
 extension IngridientsVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         var searchArr = [String]()
-        searchArr = arrayIngridients.filter ({ $0.prefix(searchText.count) == searchText})
+        searchArr = Arr().arrayIngridients.filter ({ $0.prefix(searchText.count) == searchText})
         
         searchIngridients = searchArr
         searching = true

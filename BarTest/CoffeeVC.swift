@@ -28,14 +28,14 @@ class CoffeeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayCoffee.count
+        return Arr().arrayCoffee.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellCoffee = tableView.dequeueReusableCell(withIdentifier: "cellCoffee", for: indexPath)
-        cellCoffee.textLabel?.text = arrayCoffee[indexPath.row].name
+        cellCoffee.textLabel?.text = Arr().arrayCoffee[indexPath.row].name
         cellCoffee.detailTextLabel?.text = "->"
-        cellCoffee.imageView?.image = UIImage(named: arrayCoffee[indexPath.row].image)
+        cellCoffee.imageView?.image = UIImage(named: Arr().arrayCoffee[indexPath.row].image)
         return cellCoffee
     }
     
@@ -54,7 +54,7 @@ class CoffeeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        choosedCoffee = arrayCoffee[indexPath.row]
+        choosedCoffee = Arr().arrayCoffee[indexPath.row]
         performSegue(withIdentifier: "showCoffee", sender: nil)
     }
 }
