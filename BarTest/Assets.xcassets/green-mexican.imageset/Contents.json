@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "mochaccino.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "green-mexican.jpg",
       "scale" : "2x"
     },
     {

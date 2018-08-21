@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "long-island-ice-tea.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "long-island-ice-tea.jpg",
       "scale" : "2x"
     },
     {

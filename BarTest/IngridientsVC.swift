@@ -16,9 +16,14 @@ class IngridientsVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var choosedIngridients: String?
     var searching = false
     var searchIngridients = [String]()
+    let arrayIngridients = Arrays().arrayIngridients.sorted {$0 < $1}
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let alertController = UIAlertController(title: "Выбери ингридиент", message: "и я подберу тебе коктейль который ты можешь приготовить ;)", preferredStyle: .alert)
+        let alertOkAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(alertOkAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,7 +38,7 @@ class IngridientsVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         if searching {
             return  searchIngridients.count
         } else {
-            return Arr().arrayIngridients.count
+            return arrayIngridients.count
         }
     }
     
@@ -42,7 +47,7 @@ class IngridientsVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         if searching {
             cellIngridients.textLabel?.text = searchIngridients[indexPath.row]
         } else{
-            cellIngridients.textLabel?.text = Arr().arrayIngridients[indexPath.row]
+            cellIngridients.textLabel?.text = arrayIngridients[indexPath.row]
         }
         cellIngridients.detailTextLabel?.text = "->"
         return cellIngridients
@@ -55,11 +60,12 @@ class IngridientsVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         UIView.animate(withDuration: 0.2, delay: 0.2 , options: .curveEaseInOut, animations: {
             cell.layer.transform = CATransform3DIdentity })
+        
     }
     
     //MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        choosedIngridients = Arr().arrayIngridients[indexPath.row]
+        choosedIngridients = arrayIngridients[indexPath.row]
         performSegue(withIdentifier: "cockByIng", sender: nil)
     }
 }
@@ -67,7 +73,7 @@ class IngridientsVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 extension IngridientsVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         var searchArr = [String]()
-        searchArr = Arr().arrayIngridients.filter ({ $0.prefix(searchText.count) == searchText})
+        searchArr = arrayIngridients.filter ({ $0.prefix(searchText.count) == searchText})
         
         searchIngridients = searchArr
         searching = true

@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "white rum.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "mocachino.jpg",
       "scale" : "2x"
     },
     {

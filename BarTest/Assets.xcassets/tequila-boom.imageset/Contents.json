@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "sirup.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "tequila-boom.jpg",
       "scale" : "2x"
     },
     {

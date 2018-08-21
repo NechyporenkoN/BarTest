@@ -13,6 +13,7 @@ class CoffeeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
    
     var choosedCoffee: Coffee?
+    let arrayCoffee = Arrays().arrayCoffee.sorted {$0.name < $1.name}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +29,14 @@ class CoffeeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Arr().arrayCoffee.count
+        return arrayCoffee.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellCoffee = tableView.dequeueReusableCell(withIdentifier: "cellCoffee", for: indexPath)
-        cellCoffee.textLabel?.text = Arr().arrayCoffee[indexPath.row].name
+        cellCoffee.textLabel?.text = arrayCoffee[indexPath.row].name
         cellCoffee.detailTextLabel?.text = "->"
-        cellCoffee.imageView?.image = UIImage(named: Arr().arrayCoffee[indexPath.row].image)
+        cellCoffee.imageView?.image = UIImage(named: arrayCoffee[indexPath.row].image)
         return cellCoffee
     }
     
@@ -54,7 +55,7 @@ class CoffeeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        choosedCoffee = Arr().arrayCoffee[indexPath.row]
+        choosedCoffee = arrayCoffee[indexPath.row]
         performSegue(withIdentifier: "showCoffee", sender: nil)
     }
 }

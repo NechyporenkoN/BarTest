@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "grenadine.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "pina-colada.jpg",
       "scale" : "2x"
     },
     {
